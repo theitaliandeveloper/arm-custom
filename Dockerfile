@@ -75,3 +75,6 @@ RUN git config --global --add safe.directory /opt/arm
 
 CMD ["/sbin/my_init"]
 WORKDIR /home/arm
+
+# Install Intel Graphics Driver and sg3-utils
+RUN apt update && apt install -y intel-media-va-driver-non-free sg3-utils
